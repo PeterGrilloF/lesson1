@@ -1,0 +1,122 @@
+:root {
+    --verydark: hsl(233, 47%, 7%);
+    --dark: hsl(244, 38%, 16%);
+    --soft: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --whitelight: hsla(0, 0%, 100%, 0.75);
+    --whitelighter: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    background: var(--verydark);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: var(--whitelight);
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--white);
+}
+
+h1 span {
+    color: var(--soft);
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats h1 {
+    line-height: 10px;
+}
+
+.stats span {
+    text-transform: uppercase;
+}
+
+.single-stat {
+    margin: 25px 50px 0 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: var(--verydark);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .stats {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .top-image {
+        width: 50%;
+        order: 2;
+    }
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 50%;
+        order: 1;
+        text-align: left;
+        height: 100%;
+
+    }
+}
+
+.card {
+    width: 375px;
+    background: var(--dark);
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info {
+    margin: 40px 35px;
+}
+
+.info p {
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+        flex-wrap: nowrap;
+        width: 1440px;
+        min-width: 800px;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+.top-image {
+    background: var(--soft);
+}
+
+.card img {
+    width: 100%;
+    mix-blend-mode: multiply;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    min-height: 100%;
+}
+
+
